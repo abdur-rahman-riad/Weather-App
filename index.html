@@ -34,12 +34,33 @@
             margin-top: -10px;
             margin-bottom: 0;
         }
+
+        section {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .custom-width {
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 768px) {
+            section {
+                width: 90%;
+            }
+
+            .custom-width {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
 <body style="background-color: rgb(254, 242, 242);">
     <main>
-        <section class="w-50 mx-auto mt-5 p-3 custom-shadow custom-bg">
+        <section class="mt-5 p-3 custom-shadow custom-bg">
             <h3 class="text-center fw-bold text-white">Weather App</h3>
             <!-- Search Option -->
             <div class="input-group mb-3 w-75 mx-auto">
@@ -77,7 +98,7 @@
                 <hr class="text-white">
                 <!-- Humidility and Feels Like -->
                 <div class="w-75 mx-auto">
-                    <div class="w-75 mx-auto text-white d-flex justify-content-between align-items-center">
+                    <div class="text-white d-flex justify-content-between align-items-center custom-width">
                         <p class="fs-5 custom-p">Feels Like: <span id="feels-like">30</span>&deg;C</p>
                         <p class="fs-5 custom-p">Humidility: <span id="humidility">30</span>%</p>
                     </div>
