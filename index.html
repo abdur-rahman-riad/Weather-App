@@ -21,14 +21,18 @@
         }
 
         .custom-h5-margin {
-            margin-top: -18px;
-            margin-bottom: 0;
-            font-size: 1.5em;
+            margin-top: 0;
+            margin-bottom: 10px;
             font-weight: bold;
         }
 
         .custom-bg {
-            background-color: rgb(52, 211, 153);
+            background-color: rgb(22, 37, 175);
+        }
+
+        .custom-p {
+            margin-top: -10px;
+            margin-bottom: -10px;
         }
     </style>
 </head>
@@ -45,28 +49,37 @@
             <hr class="text-white">
             <!-- Main Content -->
             <div class="text-center">
-                <img src="img/cloud.svg" class="img-fluid" width="120px" height="120px" alt="Icons">
-                <h1 class="fw-bold text-white mt-3 mb-0" style="font-size: 3rem;"><span>30</span><sup>&deg;C</sup></h1>
+                <h5 class="custom-h5-margin text-white">01 Sept 2021</h5>
+                <img src="img/cloud.svg" class="img-fluid" width="100px" height="100px" alt="Icons">
+                <h1 class="fw-bold text-white mt-3 mb-0" style="font-size: 2.5rem;"><span>30</span><sup>&deg;C</sup>
+                </h1>
                 <h4 class="mt-0 text-white">Feni, Bangladesh</h4>
+                <p class="text-white custom-p fst-italic"><span>Cloud </span>(<span>Overcast Clouds</span>)</p>
             </div>
             <hr class="text-white">
-            <!-- Bottom Part Conent -->
-            <div class="row w-75 mx-auto">
-                <div class="col mx-1 py-3 custom-shadow d-flex flex-column align-items-center justify-content-center">
-                    <img src="img/storm.svg" width="40px" alt="Icons">
-                    <p>Wind Speed</p>
-                    <h5 class="custom-h5-margin">50</h5>
+            <!-- Humidility and Feels Like -->
+            <div class="w-75 mx-auto">
+                <div class="w-75 mx-auto text-white d-flex justify-content-between align-items-center">
+                    <p class="fs-5 custom-p">Feels Like 30&deg;C</p>
+                    <p class="fs-5 custom-p">Humidility 30.00%</p>
                 </div>
-                <div class="col mx-1 py-3 custom-shadow d-flex flex-column align-items-center justify-content-center">
-                    <img src="img/storm.svg" width="40px" alt="Icons">
-                    <h5>Clouds</h5>
+                <hr class="text-white">
+            </div>
+
+            <!-- Sunrise & Sunset -->
+            <div class="row w-50 mx-auto">
+                <div class="col text-white d-flex flex-column justify-content-between align-items-center">
+                    <img src="img/sunrise.png" width="35px" alt="">
+                    <h6>Sunrise</h6>
+                    <h5>05.00 AM</h5>
                 </div>
-                <div class="col mx-1 py-3 custom-shadow d-flex flex-column align-items-center justify-content-center">
-                    <img src="img/storm.svg" width="40px" alt="Icons">
-                    <p>Humidility</p>
-                    <h5 class="custom-h5-margin">60</h5>
+                <div class="col text-white d-flex flex-column justify-content-between align-items-center">
+                    <img src="img/sunset.png" width="35px" alt="">
+                    <h6>Sunrise</h6>
+                    <h5>05.00 AM</h5>
                 </div>
             </div>
+
         </section>
     </main>
     <footer class="text-center fst-italic text-secondary">
