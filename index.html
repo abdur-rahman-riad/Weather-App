@@ -32,7 +32,7 @@
 
         .custom-p {
             margin-top: -10px;
-            margin-bottom: -10px;
+            margin-bottom: 0;
         }
     </style>
 </head>
@@ -47,36 +47,40 @@
                 <button id="search-button" class="btn btn-danger" type="button">Search</button>
             </div>
             <hr class="text-white">
-            <!-- Main Content -->
-            <div class="text-center">
-                <h5 class="custom-h5-margin text-white">01 Sept 2021</h5>
-                <img src="img/cloud.svg" class="img-fluid" width="100px" height="100px" alt="Icons">
-                <h1 class="fw-bold text-white mt-3 mb-0" style="font-size: 2.5rem;"><span>30</span><sup>&deg;C</sup>
-                </h1>
-                <h4 class="mt-0 text-white">Feni, Bangladesh</h4>
-                <p class="text-white custom-p fst-italic"><span>Cloud </span>(<span>Overcast Clouds</span>)</p>
-            </div>
-            <hr class="text-white">
-            <!-- Humidility and Feels Like -->
-            <div class="w-75 mx-auto">
-                <div class="w-75 mx-auto text-white d-flex justify-content-between align-items-center">
-                    <p class="fs-5 custom-p">Feels Like 30&deg;C</p>
-                    <p class="fs-5 custom-p">Humidility 30.00%</p>
-                </div>
-                <hr class="text-white">
+
+            <div id="empty-city" style="display: none;">
+                <p class="text-center text-white bg-danger rounded-3 p-2 fst-italic">Search Filed Can't Be Empty. Please
+                    Type Your City Name</p>
             </div>
 
-            <!-- Sunrise & Sunset -->
-            <div class="row w-50 mx-auto">
-                <div class="col text-white d-flex flex-column justify-content-between align-items-center">
-                    <img src="img/sunrise.png" width="35px" alt="">
-                    <h6>Sunrise</h6>
-                    <h5>05.00 AM</h5>
+            <div id="not-found" style="display: none;"
+                class="text-center text-white bg-danger rounded-3 p-2 fst-italic">
+                <h2>404 Not Found !</h2>
+                <p>Please Search by Valid City Name</p>
+            </div>
+
+            <div class="main-container" id="main-container" style="display: none;">
+                <!-- Main Content -->
+                <div class="text-center">
+                    <h5 class="custom-h5-margin text-white"> <span id="toDay">1</span> <span
+                            id="currentMonth">Sept</span> <span id="thisYear">2021</span></h5>
+                    <img src="img/cloud.svg" class="img-fluid" width="100px" height="100px" alt="Icons">
+                    <h1 class="fw-bold text-white mt-3 mb-0" style="font-size: 2.5rem;"><span
+                            id="temp-ID">30</span><sup>&deg;C</sup>
+                    </h1>
+                    <h4 class="mt-0 text-white"> <span id="city-name">Feni</span>,<span id="country-ID">
+                            Bangladesh</span></h4>
+                    <p class="text-white custom-p fst-italic"><span id="weather-mode">Cloud </span>( <span
+                            id="weather-description">Overcast
+                            Clouds</span> )</p>
                 </div>
-                <div class="col text-white d-flex flex-column justify-content-between align-items-center">
-                    <img src="img/sunset.png" width="35px" alt="">
-                    <h6>Sunrise</h6>
-                    <h5>05.00 AM</h5>
+                <hr class="text-white">
+                <!-- Humidility and Feels Like -->
+                <div class="w-75 mx-auto">
+                    <div class="w-75 mx-auto text-white d-flex justify-content-between align-items-center">
+                        <p class="fs-5 custom-p">Feels Like: <span id="feels-like">30</span>&deg;C</p>
+                        <p class="fs-5 custom-p">Humidility: <span id="humidility">30</span>%</p>
+                    </div>
                 </div>
             </div>
 
